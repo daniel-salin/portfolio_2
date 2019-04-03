@@ -7,6 +7,7 @@ import HireMePopup from '../components/HireMePopup.js';
 import { media } from '../MediaQueries';
 import Img from 'gatsby-image';
 import { graphql } from 'gatsby';
+import Typed from 'react-typed';
 
 const AboveFold = styled.div`
   ${Mixins.aboveFoldMixin}
@@ -18,6 +19,13 @@ const AboveFold = styled.div`
   ${t.H4} {
     line-height: 1.14;
   }
+  ${media.tablet`background-position: center top 0px;`};
+`;
+
+const Block = styled.div`
+  ${Mixins.aboveFoldMixin}
+  padding: 50px 100px 50px 100px;
+
   ${media.tablet`background-position: center top 0px;`};
 `;
 
@@ -84,11 +92,26 @@ class AboutMe extends React.Component {
         <Layout theme="white" openContactPopup={this.openContactPopup}>
           <AboveFold>
             <t.H1 green align="center">
-              Name Surname - Lorem ipsum
+              <Typed strings={['Daniel Salin']} typeSpeed={40} />
             </t.H1>
-            <t.LargeP align="center" max70>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </t.LargeP>
+            <Block>
+              <t.P align="center" max100>
+                Web development is as much of a passion as it is a possible career. We build things, broken things,
+                beautiful things. Sometimes for others, often for ourselves. The feeling of building something and
+                putting it out for the world to see is a feeling second to none. I believe in the agile work flow and
+                live by version control. The git repo has most of the projects listed as private repo's but if you'd
+                like to take a gander at anything just contact me and I'll make it public.
+              </t.P>
+            </Block>
+            <Block>
+              <t.P align="center" max100>
+                Web development is as much of a passion as it is a possible career. We build things, broken things,
+                beautiful things. Sometimes for others, often for ourselves. The feeling of building something and
+                putting it out for the world to see is a feeling second to none. I believe in the agile work flow and
+                live by version control. The git repo has most of the projects listed as private repo's but if you'd
+                like to take a gander at anything just contact me and I'll make it public.
+              </t.P>
+            </Block>
           </AboveFold>
           <Content>
             <Img fluid={data.avatarAbout.childImageSharp.fluid} alt="Name Surname" className="avatar" />
@@ -104,7 +127,7 @@ export default AboutMe;
 
 export const pageQuery = graphql`
   query {
-    avatarAbout: file(relativePath: { eq: "avatar.jpg" }) {
+    avatarAbout: file(relativePath: { eq: "avatar.png" }) {
       ...fluidImage
     }
   }

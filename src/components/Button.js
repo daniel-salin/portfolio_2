@@ -5,30 +5,46 @@ import { Link } from 'gatsby';
 
 export const Button = styled(Link)`
   background: ${props => props.theme.bg};
-  color: ${props =>
-    props.theme === 'white' ? `${Colors.darkest};` : `${Colors.white};`};
+  color: ${props => (props.theme === 'white' ? `${Colors.darkest};` : `${Colors.white};`)};
   line-height: 1.05;
   font-size: 16px;
   font-weight: bold;
   padding: ${props => (props.large ? '15px 34px;' : '12px 30px;')}
-  border: 1px solid ${props =>
-    props.theme === 'white' ? `${Colors.darkest};` : `${Colors.white};`};
+  border: 1px solid ${props => (props.theme === 'white' ? `${Colors.darkest};` : `${Colors.white};`)};
   border-radius: 100px;
   cursor: pointer;
   display: inline-block;
   text-decoration: none;
   ${props => props.book && 'margin-left: 15px;'}
   &:hover {
-    color: ${props =>
-      props.theme === 'white'
-        ? `${lighten(0.3, Colors.darkest)};`
-        : `${darken(0.1, Colors.white)};`};
+    color: ${props => (props.theme === 'white' ? `${lighten(0.3, Colors.darkest)};` : `${darken(0.1, Colors.white)};`)};
     text-decoration: none;
     background: transparent;
     border: 1px solid ${props =>
-      props.theme === 'white'
-        ? `${lighten(0.3, Colors.darkest)};`
-        : `${darken(0.1, Colors.white)};`};
+      props.theme === 'white' ? `${lighten(0.3, Colors.darkest)};` : `${darken(0.1, Colors.white)};`};
+  }
+`;
+
+export const MenuButtons = styled(Link)`
+  background: ${props => props.theme.bg};
+  margin-x:10px;
+  color: ${props => (props.theme === 'white' ? `${Colors.darkest};` : `${Colors.white};`)};
+  line-height: 1.05;
+  font-size: 16px;
+  font-weight: bold;
+  padding: ${props => (props.large ? '15px 34px;' : '12px 30px;')}
+  border: 1px solid ${props => (props.theme === 'white' ? `${Colors.darkest};` : `${Colors.white};`)};
+  border-radius: 100px;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  ${props => props.book && 'margin-left: 15px;'}
+  &:hover {
+    color: ${props => (props.theme === 'white' ? `${lighten(0.3, Colors.darkest)};` : `${darken(0.1, Colors.white)};`)};
+    text-decoration: none;
+    background: transparent;
+    border: 1px solid ${props =>
+      props.theme === 'white' ? `${lighten(0.3, Colors.darkest)};` : `${darken(0.1, Colors.white)};`};
   }
 `;
 

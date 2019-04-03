@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
-import Header from './Header';
+//import Header from './Header';
 import Footer from './Footer';
 import GlobalStyles from '../GlobalStyles';
 import * as Mixins from '../Mixins';
@@ -16,14 +16,7 @@ export const LayoutWrapper = styled.div`
   position: relative;
 `;
 
-const Layout = ({
-  children,
-  theme,
-  bigFooter,
-  mediumFooter,
-  openContactPopup
-  
-}) => (
+const Layout = ({ children, theme, bigFooter, mediumFooter, openContactPopup }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -42,21 +35,16 @@ const Layout = ({
           meta={[
             {
               name: 'description',
-              content:
-                'Portfolio built using Gatsby and React'
+              content: 'Portfolio built using Gatsby and React'
             },
             { name: 'keywords', content: 'portfolio' }
           ]}
         >
           <html lang="en" />
         </Helmet>
-        <Header theme={theme} openContactPopup={openContactPopup} />
+        {/*<Header theme={theme} openContactPopup={openContactPopup} />*/}
         <LayoutWrapper>{children}</LayoutWrapper>
-        <Footer
-          big={bigFooter}
-          medium={mediumFooter}
-          openContactPopup={openContactPopup}
-        />
+        <Footer big={bigFooter} medium={mediumFooter} openContactPopup={openContactPopup} />
       </>
     )}
   />

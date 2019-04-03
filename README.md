@@ -1,8 +1,3 @@
-<p align="center">
-  <a href="https://www.linkedin.com/in/miloslekovic/">
-    <img alt="Milos Lekovic" src="src/images/favicon.ico" width="60" />
-  </a>
-</p>
 <h1 align="center">
   Portfolio website built in Gatsby
 </h1>
@@ -10,10 +5,6 @@
 <a href="https://relaxed-bhaskara-5abd0a.netlify.com/" target="_blank">
   Preview live version
 </a>
-
-Kick off your portfolio website with this default boilerplate. This barebones starter ships with the main portfolio items you might need. 
-
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
 
 ## 🚀 Quick start
 
@@ -31,6 +22,7 @@ _Have another more specific idea? You may want to check out our vibrant collecti
     ```sh
     gatsby develop
     ```
+
     Your site is now running at `http://localhost:8000`!
 
 3.  **Deploy it.**

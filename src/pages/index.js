@@ -3,7 +3,19 @@ import styled from 'styled-components';
 import * as Mixins from '../Mixins';
 import * as t from '../Typography';
 import Layout, { Content } from '../components/Layout';
-import Placeholder from '../images/placeholder.png';
+//IMG
+import Kkaraoke from '../images/kkaraoke.png';
+import Hiragana from '../images/hiragana.png';
+import Hangman from '../images/hangman.png';
+import Mashup from '../images/apimashup.png';
+import Todo from '../images/todo.png';
+import Trello from '../images/trello.png';
+import Recipe from '../images/recipe.png';
+import Weather from '../images/weather.png';
+import Resume from '../images/Resume_DS.pdf';
+
+import Typed from 'react-typed';
+
 import { HireMe, LinkButton } from '../components/Button.js';
 import HireMePopup from '../components/HireMePopup.js';
 import { media } from '../MediaQueries';
@@ -146,39 +158,47 @@ class Homepage extends React.Component {
           <AboveFold>
             <Img fluid={data.avatarHomepage.childImageSharp.fluid} alt="Name Surname" className="avatar" />
             <t.H1 primary align="center">
-              Name Surname
+              <Typed strings={['Web Developer', 'Daniel Salin']} typeSpeed={40} backSpeed={50} />
             </t.H1>
             <t.LargeP align="center" max45>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Studying Web development (fullstack) at Chas Academy, currently applying for LIA / internships. Freelance
+              web developer
             </t.LargeP>
-            <HireMe large onClick={this.openContactPopup} book>
-              Hire me
+            <HireMe as="a" target="_blank" large href={Resume} book>
+              Resume
+            </HireMe>
+            <HireMe as="a" target="_blank" large href="https://www.linkedin.com/in/daniel-salin-57084535/" book>
+              LinkedIn
+            </HireMe>
+            <HireMe as="a" target="_blank" large href="https://github.com/daniel-salin" book>
+              Github
             </HireMe>
           </AboveFold>
-          <Content>
-            <t.H2 primary align="center" bold>
-              Lorem ipsum
-            </t.H2>
-            <t.P align="center" max70 className="who-desc">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </t.P>
-            <t.H2 primary align="center" bold className="portfolio">
-              Portfolio
-            </t.H2>
-          </Content>
+          <Block>
+            <t.H4 align="center">
+              In the pipeline: IMDB clone, feedback system for lectures, applying for internships/job
+            </t.H4>
+          </Block>
+          <Block>
+            <t.H4 align="center">Portfolio in chronological order</t.H4>
+          </Block>
           <Block>
             <BlockContent>
               <DivWrapper>
-                <ItemImage src={Placeholder} alt="Placeholder title" />
+                <ItemImage src={Kkaraoke} alt="kkaraoke" />
               </DivWrapper>
               <DivWrapper>
-                <t.H2 bold>Placeholder website</t.H2>
-                <t.P>Lorem ipsum</t.P>
-                <t.P>Dolor sit amet</t.P>
-                <LinkButton primary bold className="link" as="a"
-                  target="_blank"
-                  href="#">
-                  Lorem ipsum
+                <t.H2 bold>KKaraoke - Complete site redesign</t.H2>
+                <t.P>Type: Freelance</t.P>
+                <t.P>
+                  This was my first real venture into freelance. It started out as a simple pitch to one of the owners
+                  that caught his interest. Worked against his specifications and demands over the course of a few
+                  months before we finally went live. Taught me alot about working against client demands and being
+                  flexible.
+                </t.P>
+                <t.P>HTML5, CSS3, PHP, MYSQLi</t.P>
+                <LinkButton primary bold className="link" as="a" target="_blank" href="http://kkaraoke.se/">
+                  Visit the site
                 </LinkButton>
               </DivWrapper>
             </BlockContent>
@@ -186,33 +206,50 @@ class Homepage extends React.Component {
           <Block>
             <BlockContent>
               <DivWrapper>
-                <t.H2 bold>Placeholder website</t.H2>
-                <t.P>Lorem ipsum</t.P>
-                <t.P>Dolor sit amet</t.P>
-                <LinkButton primary bold className="link" as="a"
+                <t.H2 bold>Japanese hiragana aid</t.H2>
+                <t.P>
+                  Our first hand-in assignment from Chas Academy. A simple static site with a guide to the hiragana
+                  writing system
+                </t.P>
+                <t.P>HTML5, CSS3</t.P>
+                <LinkButton
+                  primary
+                  bold
+                  className="link"
+                  as="a"
                   target="_blank"
-                  href="#">
-                  Lorem ipsum
+                  href="http://danielsalin.chas.academy/u01-static-website/index.html"
+                >
+                  Visit the site
                 </LinkButton>
               </DivWrapper>
               <DivWrapper>
-                <ItemImage src={Placeholder} alt="Placeholder title" />
+                <ItemImage src={Hiragana} alt="Japanese hiragana aid" />
               </DivWrapper>
             </BlockContent>
           </Block>
           <Block>
             <BlockContent>
               <DivWrapper>
-                <ItemImage src={Placeholder} alt="Placeholder title" />
+                <ItemImage src={Hangman} alt="Hangman" />
               </DivWrapper>
               <DivWrapper>
-                <t.H2 bold>Placeholder website</t.H2>
-                <t.P>Lorem ipsum</t.P>
-                <t.P>Dolor sit amet</t.P>
-                <LinkButton primary bold className="link" as="a"
+                <t.H2 bold>Hangman Game</t.H2>
+                <t.P>Type: Assignment</t.P>
+                <t.P>
+                  A fun little hangman game with some light score counting. Our first venture into APIs. Having grown up
+                  with pokémon games I decided to make my own tribute.
+                </t.P>
+                <t.P>HTML5, CSS3, JS</t.P>
+                <LinkButton
+                  primary
+                  bold
+                  className="link"
+                  as="a"
                   target="_blank"
-                  href="#">
-                  Lorem ipsum
+                  href="http://danielsalin.chas.academy/u02-hangman/index.html"
+                >
+                  Visit the site
                 </LinkButton>
               </DivWrapper>
             </BlockContent>
@@ -220,26 +257,125 @@ class Homepage extends React.Component {
           <Block>
             <BlockContent>
               <DivWrapper>
-                <t.H2 bold>Placeholder website</t.H2>
-                <t.P>Lorem ipsum</t.P>
-                <t.P>Dolor sit amet</t.P>
-                <LinkButton primary bold className="link" as="a"
+                <t.H2 bold>API mashup- Image gallery</t.H2>
+                <t.P>Type: Assignment</t.P>
+                <t.P>This assignment relied on mashing up different APIs to make an image gallery. </t.P>
+                <t.P>JS, APIs</t.P>
+                <LinkButton
+                  primary
+                  bold
+                  className="link"
+                  as="a"
                   target="_blank"
-                  href="#">
-                  Lorem ipsum
+                  href="http://danielsalin.chas.academy/u03-api-mashup/index.html"
+                >
+                  Visit the site
                 </LinkButton>
               </DivWrapper>
               <DivWrapper>
-                <ItemImage src={Placeholder} alt="Placeholder title" />
+                <ItemImage src={Mashup} alt="API mashup" />
+              </DivWrapper>
+            </BlockContent>
+          </Block>
+          <Block>
+            <BlockContent>
+              <DivWrapper>
+                <ItemImage src={Todo} alt="Todo" />
+              </DivWrapper>
+              <DivWrapper>
+                <t.H2 bold>Todo App</t.H2>
+                <t.P>Tackling the MVC concept this app utilizes a simple framework and database</t.P>
+                <t.P>MVC, JS</t.P>
+                <LinkButton
+                  primary
+                  bold
+                  className="link"
+                  as="a"
+                  target="_blank"
+                  href="http://todo.danielsalin.chas.academy/"
+                >
+                  Visit the site
+                </LinkButton>
+              </DivWrapper>
+            </BlockContent>
+          </Block>
+          <Block>
+            <BlockContent>
+              <DivWrapper>
+                <t.H2 bold>Trello Clone</t.H2>
+                <t.P>
+                  Don't underestimate jQuery, this app was built as means to introduce jQuery and why it still has a
+                  place in the current climate.
+                </t.P>
+                <t.P>jQuery</t.P>
+                <LinkButton
+                  primary
+                  bold
+                  className="link"
+                  as="a"
+                  target="_blank"
+                  href="http://danielsalin.chas.academy/u05-trello-clone/index.html"
+                >
+                  Visit the site
+                </LinkButton>
+              </DivWrapper>
+              <DivWrapper>
+                <ItemImage src={Trello} alt="Trello clone" />
+              </DivWrapper>
+            </BlockContent>
+          </Block>
+          <Block>
+            <BlockContent>
+              <DivWrapper>
+                <ItemImage src={Recipe} alt="Recipe app" />
+              </DivWrapper>
+              <DivWrapper>
+                <t.H2 bold>Recipe App (Back End and Front End)</t.H2>
+                <t.P>Type: assignment</t.P>
+                <t.P>Build a RESTful API and connect it to a Front End app made in Angular.</t.P>
+                <t.P>PHP, MVC (Laravel, Angular)</t.P>
+                <LinkButton
+                  primary
+                  bold
+                  className="link"
+                  as="a"
+                  target="_blank"
+                  href="http://recipe-app.danielsalin.chas.academy/recipe"
+                >
+                  Visit the site
+                </LinkButton>
+              </DivWrapper>
+            </BlockContent>
+          </Block>
+          <Block>
+            <BlockContent>
+              <DivWrapper>
+                <t.H2 bold>Weather App</t.H2>
+                <t.P>
+                  My favorite thus far. Utilizes the built in Geolocation API and the superb DarkSky API wrapped with
+                  React and some bootstrap for good measure
+                </t.P>
+                <t.P>React, Bootstrap, APIs</t.P>
+                <LinkButton
+                  primary
+                  bold
+                  className="link"
+                  as="a"
+                  target="_blank"
+                  href="https://daniel-salin.github.io/weather-app/"
+                >
+                  Visit the site
+                </LinkButton>
+              </DivWrapper>
+              <DivWrapper>
+                <ItemImage src={Weather} alt="Placeholder title" />
               </DivWrapper>
             </BlockContent>
           </Block>
           <WorkWithMe>
             <t.H1 green>Get in touch with me</t.H1>
-            <t.LargeP>
-              Fancy working with me? Contact me for more info!{' '}
-            </t.LargeP>
-            <HireMe onClick={this.openContactPopup} book>
+            <t.LargeP>Let's build something together!</t.LargeP>
+            <HireMe as="a" target="_blank" large href="https://www.linkedin.com/in/daniel-salin-57084535/" book>
               Contact me
             </HireMe>
           </WorkWithMe>
@@ -254,7 +390,7 @@ export default Homepage;
 
 export const pageQuery = graphql`
   query {
-    avatarHomepage: file(relativePath: { eq: "avatar.jpg" }) {
+    avatarHomepage: file(relativePath: { eq: "avatar.png" }) {
       ...fluidImage
     }
   }
