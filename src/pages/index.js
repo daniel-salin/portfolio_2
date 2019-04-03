@@ -207,6 +207,7 @@ class Homepage extends React.Component {
             <BlockContent>
               <DivWrapper>
                 <t.H2 bold>Japanese hiragana aid</t.H2>
+                <t.P>Type: Assignment</t.P>
                 <t.P>
                   Our first hand-in assignment from Chas Academy. A simple static site with a guide to the hiragana
                   writing system
@@ -284,6 +285,7 @@ class Homepage extends React.Component {
               </DivWrapper>
               <DivWrapper>
                 <t.H2 bold>Todo App</t.H2>
+                <t.P>Type: Assignment</t.P>
                 <t.P>Tackling the MVC concept this app utilizes a simple framework and database</t.P>
                 <t.P>MVC, JS</t.P>
                 <LinkButton
@@ -303,6 +305,7 @@ class Homepage extends React.Component {
             <BlockContent>
               <DivWrapper>
                 <t.H2 bold>Trello Clone</t.H2>
+                <t.P>Type: Assignment</t.P>
                 <t.P>
                   Don't underestimate jQuery, this app was built as means to introduce jQuery and why it still has a
                   place in the current climate.
@@ -331,7 +334,7 @@ class Homepage extends React.Component {
               </DivWrapper>
               <DivWrapper>
                 <t.H2 bold>Recipe App (Back End and Front End)</t.H2>
-                <t.P>Type: assignment</t.P>
+                <t.P>Type: Assignment</t.P>
                 <t.P>Build a RESTful API and connect it to a Front End app made in Angular.</t.P>
                 <t.P>PHP, MVC (Laravel, Angular)</t.P>
                 <LinkButton
@@ -351,6 +354,7 @@ class Homepage extends React.Component {
             <BlockContent>
               <DivWrapper>
                 <t.H2 bold>Weather App</t.H2>
+                <t.P>Type: Assignment</t.P>
                 <t.P>
                   My favorite thus far. Utilizes the built in Geolocation API and the superb DarkSky API wrapped with
                   React and some bootstrap for good measure
